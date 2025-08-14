@@ -61,3 +61,52 @@ SwiftShare/
 │       └── animations/      # Optional animation assets
 │
 └── README.md               # Project documentation
+```
+---
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/Rashi0903/SwiftShare.git
+cd SwiftShare
+```
+### 2️⃣ Start XAMPP (Apache + MySQL)
+
+Move the auth/ folder into your htdocs/ directory.
+
+Start Apache and MySQL from the XAMPP Control Panel.
+
+Import swiftshare1.sql into phpMyAdmin.
+
+### 3️⃣ Run the Flask Backend
+```bash
+cd backend
+python app.py
+```
+4️⃣ Access the Frontend
+Open upload.html, download.html, or dashboard.html directly in your browser.
+
+
+---
+
+```markdown
+## 🧩 How It Works
+
+### 1. **User Authentication**
+Users sign up and log in via the **PHP + MySQL** module.
+
+### 2. **File Upload**
+- Multiple files can be uploaded at once.
+- A **6-character passcode** is generated.
+
+### 3. **Download Rules**
+- Passcode works **once** OR **for 10 minutes**, whichever comes first.
+- On download, files are **zipped** and marked as **used**.
+- Expired/used passcodes → ❌ "Access Denied".
+```
+
+## 💡 Future Enhancements
+- 🔍 **Real Virus Scan** — Integrate with ClamAV or an external API.
+- 🔐 **AES File Encryption** — Add end-to-end encryption for files.
+- 📩 **Email/QR Code Sharing** — Share links with email or scannable codes.
+- ☁️ **Cloud Deployment** — Deploy to platforms like Heroku or AWS.
